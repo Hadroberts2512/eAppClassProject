@@ -7,7 +7,10 @@ userName: By = By.id('username')
 passWord: By = By.id('password')
 //end of login page
 
-neweApp: By = By.xpath(('//button[text()="Create New eApp"]'))
+neweApp: By = By.css(('class=ui active transition visible inverted dimmer'))
+thirdAttemptCreateEapp: By = By.xpath('//a[text()="Create New eApp"]')
+//this is the selector I cannot identify 
+
 state: By = By.name('PreFormModal.AppSignState')
 languageSelection: By = By.name('PreFormModal.Language')
 typeOfApp: By = By.name('PreFormModal.EAppType')
@@ -54,9 +57,17 @@ payorFirstName: By = By.name('Payor_Information.PayorFirstName')
 payorMiddleName: By = By.name('Payor_Information.PayorMiddleName')
 payorLastName:  By = By.name('Payor_Information.PayorLastName')
 payorPhone: By = By.name('Payor_Information.PayorCellPhone')
-
-
-
+payorAddress: By = By.name('Payor_Information.PayorLine1')
+payorCity: By = By.name('Payor_Information.PayorCity')
+payorState: By = By.name('Payor_Information.PayorState')
+payorZipCode: By = By.name('Payor_Information.PayorZip')
+billMode: By = By.name('Payor_Information.BillingFrequency')
+initialPayDate: By = By.name('Payor_Information.InitialPaymentDate')
+billType: By = By.name('Payor_Information.PremType')
+dueDay: By = By.name('Payor_Information.DueDay')
+routing: By = By.name('Payor_Information.RoutingTransitNum')
+account: By = By.name('Payor_Information.BankAccountNum')
+//end of payor info
 
 
 
