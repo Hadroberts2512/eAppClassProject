@@ -1,0 +1,1 @@
+eApp.driver.executeScript("arguments[0].scrollIntoView(true);", eApp.neweApp);
