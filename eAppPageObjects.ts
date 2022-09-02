@@ -7,15 +7,22 @@ userName: By = By.id('username')
 passWord: By = By.id('password')
 //end of login page
 
-neweApp: By = By.css(('class=ui active transition visible inverted dimmer'))
-thirdAttemptCreateEapp: By = By.xpath('//a[text()="Create New eApp"]')
-//this is the selector I cannot identify 
 
-state: By = By.name('PreFormModal.AppSignState')
-languageSelection: By = By.name('PreFormModal.Language')
-typeOfApp: By = By.name('PreFormModal.EAppType')
+neweApp: By = By.xpath(('//button[@class="ui blue right floated button new-eapp-button"]'))
+
+state: By = By.xpath(('(//input[@class="search"])[1]'))
+languageSelection: By = By.xpath(('(//input[@class="search"])[2]'))
+typeOfApp: By = By.xpath(('(//input[@class="search"])[3]'))
+create: By = By.xpath(('//button[@class="ui green primary button eAppbutton"]'))
 continue: By = By.xpath(('//button[text()="Continue"]'))
 //
+
+//start of health questions
+tobQ: By = By.xpath('(//label[text()="No"])[1]')
+
+
+
+
 insuredFirstName: By = By.name('Proposed_Insured.PrimInsFirstName')
 insuredMiddleName: By = By.name('Proposed_Insured.PrimInsMiddleName')
 insuredLastName: By = By.name('Proposed_Insured.PrimInsLastName')
