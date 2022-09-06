@@ -17,6 +17,9 @@ create: By = By.xpath(('//button[@class="ui green primary button eAppbutton"]'))
 continue: By = By.xpath(('//button[text()="Continue"]'))
 //
 
+applicantSection: By = By.id('1')
+
+
 //start of health questions
 tobQ: By = By.xpath('(//label[text()="No"])[1]')
 
@@ -26,7 +29,7 @@ tobQ: By = By.xpath('(//label[text()="No"])[1]')
 insuredFirstName: By = By.name('Proposed_Insured.PrimInsFirstName')
 insuredMiddleName: By = By.name('Proposed_Insured.PrimInsMiddleName')
 insuredLastName: By = By.name('Proposed_Insured.PrimInsLastName')
-insuredAddressLine1: By = By.name('Proposed_Insured.PrimInsLine1')
+insuredAddressLine1: By = By.xpath('//div[@name="Proposed_Insured.PrimInsLine1"]')
 insuredCity: By = By.name('Proposed_Insured.PrimInsCity')
 insuredState: By = By.name('Proposed_Insured.PrimInsState')
 insuredZip: By = By.name('Proposed_Insured.PrimInsZip')
