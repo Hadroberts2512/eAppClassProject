@@ -27,20 +27,32 @@ tobQ: By = By.xpath('(//label[text()="No"])[1]')
 
 
 insuredFirstName: By = By.name('Proposed_Insured.PrimInsFirstName')
-insuredMiddleName: By = By.name('Proposed_Insured.PrimInsMiddleName')
-insuredLastName: By = By.name('Proposed_Insured.PrimInsLastName')
-insuredAddressLine1: By = By.xpath('//div[@name="Proposed_Insured.PrimInsLine1"]')
-insuredCity: By = By.name('Proposed_Insured.PrimInsCity')
-insuredState: By = By.name('Proposed_Insured.PrimInsState')
-insuredZip: By = By.name('Proposed_Insured.PrimInsZip')
-insuredPhone: By = By.name('Proposed_Insured.PrimInsHomePhone')
-ssn: By = By.name('Proposed_Insured.PrimInsGovtID')
+insuredFirstNameXpath: By = By.xpath('//input[@name="Proposed_Insured.PrimInsFirstName"]')
+insuredMiddleName: By = By.xpath('//input[@name="Proposed_Insured.PrimInsMiddleName"]')
+insuredLastName: By = By.xpath('//input[@name="Proposed_Insured.PrimInsLastName"]')
+insuredAddressLine1: By = By.xpath('//input[@name="Proposed_Insured.PrimInsLine1"]')
+insuredCity: By = By.xpath('//input[@name="Proposed_Insured.PrimInsCity"]')
+insuredState: By = By.xpath('//input[@name="Proposed_Insured.PrimInsState"]')
+insuredZip: By = By.xpath('//input[@name="Proposed_Insured.PrimInsZip"]')
+insuredPhone: By = By.xpath('//input[@name="Proposed_Insured.PrimInsHomePhone"]')
+ssn: By = By.xpath('//input[@name="Proposed_Insured.PrimInsGovtID"]')
 ssnWithheld: By = By.name('Proposed_Insured.GovtIDWithheld')
-DOB: By = By.name('Proposed_Insured.PrimInsBirthDate')
+DOB: By = By.xpath('//input[@name="Proposed_Insured.PrimInsBirthDate"]')
 age: By = By.name('Proposed_Insured.PrimInsAge')
-gender: By = By.name('Proposed_Insured.PrimInsGender')
-relation: By = By.name('Proposed_Insured.PrimInsRelationship')
+gender: By = By.xpath('//div[@name="Proposed_Insured.PrimInsGender"]//input[@type="text"]')
+relation: By = By.xpath('//input[@name="Proposed_Insured.PrimInsRelationship"]')
 //end of applicant info 
+
+healthQuestionsHeader: By = By.xpath('//div[contains(text(),"Health Questions")]')
+tobaccoNo: By = By.xpath('//div[@name="Health_Questions.TobaccoQuestions_00000000-0000-0000-0000-000000001304"]//label[contains(text(),"No")]')
+hivNo: By = By.xpath('//div[@name="Health_Questions.UninsurabilityQuestions_00000000-0000-0000-0000-000000001292"]//label[contains(text(),"No")]')
+hospiceNo: By = By.xpath('//div[@name="Health_Questions.UninsurabilityQuestions_00000000-0000-0000-0000-000000001293"]//label[contains(text(),"No")]')
+heartNo: By = By.xpath('//div[@name="Health_Questions.HealthQuestions_00000000-0000-0000-0000-000000001283"]//label[contains(text(),"No")]')
+
+
+
+
+
 
 planType: By = By.name('Policy_Information.ProductOption')
 face: By = By.name('Policy_Information.PrimInsFaceAmount')

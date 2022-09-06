@@ -20,15 +20,24 @@ test('Home Office Login', async () => {
     await eApp.driver.sleep(10000)
 
     await eApp.click(eApp.insuredFirstName)
-    await eApp.setInput(eApp.insuredFirstName, 'Pennsylvania')
-    //await eApp.setInput(eApp.insuredLastName, 'Test')
-    //await eApp.setInput(eApp.insuredAddressLine1, '123 Main Street')
-    //await eApp.setInput(eApp.insuredCity, 'Scranton')
+    await eApp.setInput(eApp.insuredFirstNameXpath, 'Pennsylvania')
+    await eApp.setInput(eApp.insuredLastName, 'Test')
+    await eApp.setInput(eApp.insuredAddressLine1, '123 Main Street')
+    await eApp.setInput(eApp.insuredCity, 'Scranton')
     //await eApp.setInput(eApp.insuredState, 'Pennsylvania')
-    //await eApp.setInput(eApp.insuredZip, '15108')
-    //await eApp.setInput(eApp.insuredPhone, '330-303-8888')
-    //await eApp.click(eApp.ssnWithheld)
+    await eApp.setInput(eApp.insuredZip, '15108')
+    await eApp.setInput(eApp.insuredPhone, '330-303-8888')
+    await eApp.setInput(eApp.DOB, "09/09/1979\n")
+    await eApp.click(eApp.gender)
+    await eApp.setInput(eApp.gender, "female\n")
+
 //end of applicant info 
+
+    await eApp.click(eApp.healthQuestionsHeader)
+    await eApp.click(eApp.tobaccoNo)
+    await eApp.click(eApp.hospiceNo)
+    await eApp.click(eApp.heartNo)
+
     
 
     await eApp.driver.sleep(4000)
