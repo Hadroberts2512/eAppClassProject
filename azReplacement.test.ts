@@ -13,6 +13,8 @@ test('Home Office Login', async () => {
     await eApp.click(eApp.neweApp)
 
     await eApp.setInput(eApp.state, 'Arizona\n')
+    await eApp.click(eApp.typeOfAppDropDown)
+    await eApp.click(eApp.typeofAppSelectField)
 
     await eApp.click(eApp.create)
     await eApp.click(eApp.applicantSection)
@@ -24,7 +26,8 @@ test('Home Office Login', async () => {
     await eApp.setInput(eApp.insuredLastName, 'Test')
     await eApp.setInput(eApp.insuredAddressLine1, '123 Main St')
     await eApp.setInput(eApp.insuredCity, 'Mesa')
-    
+    await eApp.click(eApp.insuredStateDropDown)
+    await eApp.click(eApp.insuredStateSelectAZ)
     await eApp.setInput(eApp.insuredZip, '85203')
     await eApp.setInput(eApp.insuredPhone, '480-303-8888')
     await eApp.setInput(eApp.DOB, "09/09/1979\n")
@@ -92,18 +95,27 @@ test('Home Office Login', async () => {
     await eApp.setInput(eApp.financialInstitution, 'Chase Bank')
     await eApp.setInput(eApp.bankCity, 'Phoenix')
     await eApp.click(eApp.futurePaymentsYes)
+    //end of payor section
 
+    await eApp.click(eApp.replacementSection)
+    await eApp.click(eApp.existingYes)
+    await eApp.click(eApp.replacingYes)
+    await eApp.click(eApp.producerExistYes)
+    await eApp.click(eApp.producerReplaceYes)
 
+    eApp.driver.sleep(3000)
 
-
-
-
-
-
-
-
-
+    await eApp.click(eApp.multiStateReplaceFormQuestionOneYes)
+    await eApp.click(eApp.multiStateReplaceFormQuestionTwoYes)
+    await eApp.click(eApp.addReplacementInfo)
+    await eApp.setInput(eApp.repExistingCompanyName, 'MetLife')
+    await eApp.setInput(eApp.repExistingPolicyNum, '12345')
+    await eApp.click(eApp.replaceVsFinanceReplace)
+    await eApp.click(eApp.repDoneRepInfo)
+    await eApp.setInput(eApp.repReasonForReplace, 'Too expensive')
     
+    await eApp.click(eApp.producerSection)
+    await eApp.click(eApp.producerNotSplit)
 
     await eApp.driver.sleep(4000)
     await eApp.driver.quit

@@ -12,7 +12,8 @@ neweApp: By = By.xpath('//button[@class="ui blue right floated button new-eapp-b
 
 state: By = By.xpath(('(//input[@class="search"])[1]'))
 languageSelection: By = By.xpath(('(//input[@class="search"])[2]'))
-typeOfApp: By = By.xpath(('(//input[@class="search"])[3]'))
+typeOfAppDropDown: By = By.xpath('//div[@name="PreFormModal.EAppType"]//i[@class="dropdown icon"]')
+typeofAppSelectField: By = By.xpath('//div[@name="PreFormModal.EAppType"]//div[@role="listbox"]//div[1]')
 create: By = By.xpath(('//button[@class="ui green primary button eAppbutton"]'))
 continue: By = By.xpath(('//button[text()="Continue"]'))
 //
@@ -32,7 +33,8 @@ insuredMiddleName: By = By.xpath('//input[@name="Proposed_Insured.PrimInsMiddleN
 insuredLastName: By = By.xpath('//input[@name="Proposed_Insured.PrimInsLastName"]')
 insuredAddressLine1: By = By.xpath('//input[@name="Proposed_Insured.PrimInsLine1"]')
 insuredCity: By = By.xpath('//input[@name="Proposed_Insured.PrimInsCity"]')
-insuredState: By = By.xpath('//input[@name="Proposed_Insured.PrimInsState"]')
+insuredStateDropDown: By = By.xpath('//div[@name="Proposed_Insured.PrimInsState"]//i[@class="dropdown icon"]')
+insuredStateSelectAZ: By = By.xpath('//div[@class="visible menu transition"]//span[@class="text"][normalize-space()="Arizona"]')
 insuredZip: By = By.xpath('//input[@name="Proposed_Insured.PrimInsZip"]')
 insuredPhone: By = By.xpath('//input[@name="Proposed_Insured.PrimInsHomePhone"]')
 ssn: By = By.xpath('//input[@name="Proposed_Insured.PrimInsGovtID"]')
@@ -122,6 +124,25 @@ bankCity: By = By.xpath('//input[@name="Payor_Information.BankCity"]')
 futurePaymentsYes: By = By.xpath('//div[@name="Payor_Information.FuturePaymentQuestion"]//label[contains(text(),"Yes")]')
 //end of payor info
 
+replacementSection: By = By.xpath('//div[contains(text(),"Replacement")]')
+existingYes: By = By.xpath('//div[@name="Replacement_Information.ExistingContracts"]//label[contains(text(),"Yes")]')
+existingNo: By = By.xpath('//div[@name="Replacement_Information.ExistingContracts"]//label[contains(text(),"No")]')
+replacingYes: By = By.xpath('//div[@name="Replacement_Information.IsReplacement"]//label[contains(text(),"Yes")]')
+replacingNo: By = By.xpath('//div[@name="Replacement_Information.IsReplacement"]//label[contains(text(),"No")]')
+producerExistYes: By = By.xpath('//div[@name="Replacement_Information.ProducerExistingContracts"]//label[contains(text(),"Yes")]')
+producerReplaceYes: By = By.xpath('//div[@name="Replacement_Information.ProducerIsReplacement"]//label[contains(text(),"Yes")]')
+multiStateReplaceFormQuestionOneYes: By = By.xpath('//div[@name="Replacement_Information.TerminateExistPol"]//label[contains(text(),"Yes")]')
+multiStateReplaceFormQuestionTwoYes: By = By.xpath('//div[@name="Replacement_Information.UseExistFundsFromPol"]//label[contains(text(),"Yes")]')
+addReplacementInfo: By = By.xpath('//button[normalize-space()="Add/Edit Replacement"]')
+repExistingCompanyName: By = By.xpath('//input[@name="Replacement_Information.ReplacementDetail[0].companyName"]')
+repExistingPolicyNum: By = By.xpath('//input[@name="Replacement_Information.ReplacementDetail[0].existingPolicyNumber"]')
+repDoneRepInfo: By = By.xpath('//button[normalize-space()="Done"]')
+repReasonForReplace: By = By.xpath('//input[@name="Replacement_Information.cause"]')
+replaceVsFinanceReplace: By = By.xpath('//label[normalize-space()="Replaced(R)"]')
+//end replacement section
+
+producerSection: By = By.xpath('//div[@class="title"][normalize-space()="Producer"]')
+producerNotSplit: By = By.xpath('//div[@name="Producer_Information.SplitAgent"]//label[contains(text(),"No")]')
 
 
 constructor() {
